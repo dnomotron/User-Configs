@@ -4,25 +4,26 @@ filetype off
 set ts=2
 set sw=2
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " Plugins:
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'w0rp/ale'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'cespare/vim-toml'
-Plugin 'rust-lang/rust.vim'
-Plugin 'hashivim/vim-terraform'
-Plugin 'prabirshrestha/async.vim'
-Plugin 'prabirshrestha/vim-lsp'
-Plugin 'godlygeek/tabular'
-Plugin 'preservim/vim-markdown'
+"Plugin 'VundleVim/Vundle.vim'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'w0rp/ale'
+"Plugin 'jiangmiao/auto-pairs'
+"Plugin 'cespare/vim-toml'
+"Plugin 'rust-lang/rust.vim'
+"Plugin 'hashivim/vim-terraform'
+"Plugin 'prabirshrestha/async.vim'
+"Plugin 'prabirshrestha/vim-lsp'
+"Plugin 'godlygeek/tabular'
+"Plugin 'preservim/vim-markdown'
 
-call vundle#end()
+"call vundle#end()
+
 filetype plugin on
 syntax on
 set autoindent

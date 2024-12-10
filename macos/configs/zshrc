@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -107,7 +108,7 @@ fi
 # else
 #   export EDITOR='mvim'
 # fi
-
+export EDITOR='vim'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -123,11 +124,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias -s {yml,yaml}=vi
-alias rt='sudo -s -E'
 alias shred='gshred -n 7 -z -u'
-alias l='ls -lAthr'
-alias bpython='python -m bpython'
-alias bpython3='python3 -m bpython'
 
 FPATH=~/.zsh_functions:$FPATH
 
@@ -143,5 +140,6 @@ if [ -f '/Users/dalton_rick/Applications/google-cloud-sdk/path.zsh.inc' ]; then 
 if [ -f '/Users/dalton_rick/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dalton_rick/Applications/google-cloud-sdk/completion.zsh.inc'; fi
 
 
+# Set options
+set -o vi
 unsetopt histverify
-
