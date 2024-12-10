@@ -3,8 +3,16 @@ if [[ -d ${HOME}/.zprofile.d ]]; then
     for file (${HOME}/.zprofile.d/**/*.zsh(N.)) . $file
 fi
 
-# dont remember commands that start with space
+# History Settings
 setopt HIST_IGNORE_SPACE
+unsetopt histverify
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt share_history
+setopt inc_append_history
+export HISTSIZE=1000000000
+export SAVEHIST=1000000000
 
 # Setup pyenv
 if which pyenv 1> /dev/null 2>&1; then
