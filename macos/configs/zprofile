@@ -4,7 +4,6 @@ if [[ -d ${HOME}/.zprofile.d ]]; then
 fi
 
 # History Settings
-setopt HIST_IGNORE_SPACE
 unsetopt histverify
 setopt hist_ignore_space
 setopt hist_ignore_all_dups

@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 trim='a-zA-Z0-9'
 count=''
 type='alnum'

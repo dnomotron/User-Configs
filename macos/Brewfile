@@ -3,8 +3,6 @@ brew "gpg"
 brew "gnupg"
 brew "pinentry-mac"
 brew "opensc"
-brew "ykman"
-brew "yubico-piv-tool"
 
 # CLI tools
 brew "vim"
@@ -18,6 +16,12 @@ brew "zsh"
 brew "python3"
 brew "ruby"
 brew "perl"
+brew "rust"
+brew "go"
+brew "node"
 
 # Other
 brew "libdvdcss"
+brew "docker"
+brew "tfenv"
+brew "watch"

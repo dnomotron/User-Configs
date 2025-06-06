@@ -81,32 +81,34 @@ if $BACKUP; then
 	cp "${HOME}/.gitignore_global" "${BACKUPDIR}/gitignore_global"
 fi
 
-ln -sf "${BASE_PATH}/configs/vimrc" "${HOME}/.vimrc"
+ln -sF "${BASE_PATH}/configs/vimrc" "${HOME}/.vimrc"
 mkdir -p "${HOME}/.vim_backups"
 vim +PluginInstall +qall
 
 ## Install configs
-ln -sf "${BASE_PATH}/configs/zshrc" "${HOME}/.zshrc"
 mkdir -p "${HOME}/.zshrc.d"
-ln -sf "${BASE_PATH}/configs/zprofile" "${HOME}/.zprofile"
+ln -sF "${BASE_PATH}/configs/zshrc" "${HOME}/.zshrc"
 mkdir -p "${HOME}/.zprofile.d"
-ln -sF "${BASE_PATH}/zsh_functions" "${HOME}/.zsh_functions"
+ln -sF "${BASE_PATH}/configs/zprofile" "${HOME}/.zprofile"
+
+mkdir -p "${HOME}/.bin"
+ln -sF "${BASE_PATH}/scripts/*" "${HOME}/.bin/"
 
 ## Install htoprc
 mkdir -p "${HOME}/.config/htop"
-ln -sf "${BASE_PATH}/configs/htoprc" "${HOME}/.config/htop/htoprc"
+ln -sF "${BASE_PATH}/configs/htoprc" "${HOME}/.config/htop/htoprc"
 
 ## Install karabiner config
 mkdir -p "${HOME}/.config/karabiner"
-ln -sf "${BASE_PATH}/configs/karabiner.json" "${HOME}/.config/karabiner/karabiner.json"
+ln -sF "${BASE_PATH}/configs/karabiner.json" "${HOME}/.config/karabiner/karabiner.json"
 
 ## Install iterm2 Prefs
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -int 1
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${BASE_PATH}/configs"
 
 ## Global git configs
-ln -sf "${BASE_PATH}/configs/gitconfig" "${HOME}/.gitconfig"
-ln -sf "${BASE_PATH}/configs/gitignore_global" "${HOME}/.gitignore_global"
+ln -sF "${BASE_PATH}/configs/gitconfig" "${HOME}/.gitconfig"
+ln -sF "${BASE_PATH}/configs/gitignore_global" "${HOME}/.gitignore_global"
 }
 
 

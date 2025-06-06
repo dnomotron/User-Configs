@@ -34,7 +34,7 @@ set backspace=indent,eol,start
 
 aug backitup
 	au!
-	au BufWritePre * silent !cp % ~/.vim_backups/$(echo %:p | sed 's/\(.*\/\)\(.*\)/\2\/\1/g' | sed 's/\//::/g' | sed 's/::::/@/')$(date +\%Y\%m\%d\%H\%M\%S).bak
+	au BufWritePre * silent !cp % ~/.vim_backups/"$(echo -n %:p | sed -r 's;^/(.*)/(.*)$;\2@\1;' | sed 's;/;:;g' | sed 's/ /\\ /g')-$(date +\%Y\%m\%d\%H\%M\%S).bak"
 aug end
 
 aug python_format

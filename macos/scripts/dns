@@ -1,1 +1,3 @@
+#!/usr/bin/env zsh
+
 dscacheutil -q host -a name "$@"

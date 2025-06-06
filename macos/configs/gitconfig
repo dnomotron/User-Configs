@@ -11,3 +11,4 @@
 	gpgsign = true
 [gpg]
 	program = gpg
+	format = x509
