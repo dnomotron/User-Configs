@@ -1,14 +1,18 @@
 # This is Git's per-user configuration file.
 [core]
 	pager = less -F -X
-	excludesfile = /Users/dalton_rick/.gitignore_global
+	excludesfile = ~/.gitignore_global
+
 [push]
 	followTags = true
 	default = current
+
 [pull]
 	rebase = true
-[commit]
-	gpgsign = true
-[gpg]
-	program = gpg
-	format = x509
+
+[includeIf "gitdir:~/Personal/"]
+	path = ~/.gitconfig-personal
+
+[includeIf "gitdir:~/Work/"]
+	path = ~/.gitconfig-work
+

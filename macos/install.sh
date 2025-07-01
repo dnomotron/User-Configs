@@ -108,6 +108,7 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${BASE_PATH}/con
 
 ## Global git configs
 ln -sF "${BASE_PATH}/configs/gitconfig" "${HOME}/.gitconfig"
+ln -sF "${BASE_PATH}/configs/gitconfig-personal" "${HOME}/.gitconfig-personal"
 ln -sF "${BASE_PATH}/configs/gitignore_global" "${HOME}/.gitignore_global"
 }
 
