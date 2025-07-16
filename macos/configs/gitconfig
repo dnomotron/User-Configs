@@ -10,6 +10,9 @@
 [pull]
 	rebase = true
 
+[include]
+	path = ~/.gitconfig-local
+
 [includeIf "gitdir:~/Personal/"]
 	path = ~/.gitconfig-personal
 
