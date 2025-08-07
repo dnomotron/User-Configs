@@ -1,8 +1,13 @@
 " The basics
 set nocompatible
 filetype off
-set ts=2
-set sw=2
+
+" always use spaces
+set expandtab
+set ts=4
+set sw=4
+set sts=4
+
 " use the system clipboard
 set clipboard=unnamed
 

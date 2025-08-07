@@ -13,9 +13,3 @@
 [include]
 	path = ~/.gitconfig-local
 
-[includeIf "gitdir:~/Personal/"]
-	path = ~/.gitconfig-personal
-
-[includeIf "gitdir:~/Work/"]
-	path = ~/.gitconfig-work
-

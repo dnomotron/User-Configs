@@ -34,3 +34,4 @@ alias -s {yml,yaml}=vi
 
 # Set options
 set -o vi
+
