@@ -2,11 +2,15 @@
 set nocompatible
 filetype off
 
-" always use spaces
+" default to using spaces
 set expandtab
 set ts=4
 set sw=4
 set sts=4
+
+" Override expandtab where necessary
+autocmd Filetype make setlocal noexpandtab " make does not like spaces for tabs
+autocmd Filetype sh setlocal noexpandtab " some aspects of shell code expect tabs for alignment, for example `<<-`
 
 " use the system clipboard
 set clipboard=unnamed
