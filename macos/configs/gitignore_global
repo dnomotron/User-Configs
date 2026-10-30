@@ -67,3 +67,5 @@ Temporary Items
 # Personal
 *.ignore
 ignore.*
+
+**/.claude/settings.local.json

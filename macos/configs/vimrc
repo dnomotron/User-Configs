@@ -1,6 +1,7 @@
 " The basics
 set nocompatible
 filetype off
+set termguicolors
 
 " default to using spaces
 set expandtab
@@ -66,9 +67,8 @@ let g:AutoPairsShortcutToggle='<C-p>'
 let g:vim_markdown_folding_disabled = 1
 set conceallevel=2
 
-
 " Pretty Format Json
-:command Json %!python -c "import json, sys, collections; print json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), indent=2)"
+:command Json %!python3 -c "import json, sys, collections; print(json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), indent=2))"
 
 " Toggle numbers and relative on/off
 :command Nonum set nonumber norelativenumber
@@ -82,3 +82,11 @@ if executable('rls')
         \ 'whitelist': ['rust'],
         \ })
 endif
+
+" ALE config
+let g:ale_fixers = {
+\    'javascript': ['prettier', 'eslint'],
+\    'typescript': ['prettier', 'eslint'],
+\}
+let g:ale_fix_on_save = 1
+
